@@ -1,0 +1,1 @@
+console.log(String(arguments.callee));
