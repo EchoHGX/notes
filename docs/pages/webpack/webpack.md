@@ -21,14 +21,14 @@ module.exports = {
 
 默认值`./src/index.js`，可以在 webpack 的配置文件中配置入口，配置节点为： `entry`,当然可以配置一个入口，也可以配置多个。
 
-```diff
+```js diff
 // webpack.config.js
 module.exports = {
 +	entry: './src/index.js' //单入口
 }
 ```
 
-```diff
+```js diff
 // webpack.config.js
 module.exports = {
 	entry: {	//多入口
@@ -856,7 +856,7 @@ css使用optimize-css-assets-webpack-plugin插件，
 js使用uglifyjs-webpack-plugin插件  
 安装`yarn add optimize-css-assets-webpack-plugin uglifyjs-webpack-plugin -D`  
 配置
-```
+```js
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyjsWebpackPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
@@ -878,7 +878,7 @@ module.exports = {
 使用webpack.DefinePlugin插件可以定义变量
 例如：
 
-```
+```js
 //webpack.config.js
 plugins: [
 	new webpack.DefinePlugin({
