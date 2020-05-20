@@ -52,7 +52,6 @@ export default {
   },
   methods:{
   	madd(){
-  		console.log('method1')
   		return this.num1 + this.num2
   	},
   	addfun: function(){
@@ -78,6 +77,6 @@ export default {
 
 <style>
 	div{
-		color: #f00
+		color: #f00;
 	}
 </style>

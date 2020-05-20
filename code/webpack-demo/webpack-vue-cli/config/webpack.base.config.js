@@ -19,7 +19,8 @@ module.exports = {
         test: /\.css$/,
         // 记住loader的解析顺序是从后往前的
         use: [ 
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader', 
           'postcss-loader',
         ]
@@ -27,7 +28,8 @@ module.exports = {
       {
         test: /\.(sass|scss)/,
         use: [
-          MiniCssExtractPlugin.loader,
+          // MiniCssExtractPlugin.loader,
+          'style-loader',
           'css-loader', 
           'postcss-loader', 
           'sass-loader'
@@ -72,9 +74,9 @@ module.exports = {
   },
   plugins: [
     new VueLoaderPlugin(),
-    new MiniCssExtractPlugin({
-      filename: 'css/[name].[contentHash:8].css'
-    }),
+    // new MiniCssExtractPlugin({
+    //   filename: 'css/[name].[contentHash:8].css'
+    // }),
     new HtmlWebpackPlugin({
       title: 'hello world',
       filename: 'index.html',

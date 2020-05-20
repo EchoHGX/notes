@@ -9,7 +9,7 @@ module.exports = merge(baseConfig, {
   devServer: {
     contentBase: path.resolve(__dirname,'./dist'),
     host: 'localhost',
-    port: 3003,
+    port: 3033,
     hot: true,
     compress: true,
     noInfo: true,
@@ -28,7 +28,7 @@ module.exports = merge(baseConfig, {
     }),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: ['项目成功启动，地址是localhost:8080']
+        messages: ['项目成功启动，地址是 http://localhost:3033']
       }
     })
   ]

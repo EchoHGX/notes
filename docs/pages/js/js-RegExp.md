@@ -155,3 +155,5 @@ date.replace(reg,(...args)=>{
   return month + '/' + day + '/' + year
 })  // 08/12/2019
 ```
+
+**[笔记首页](http://localhost:3000/#/)**

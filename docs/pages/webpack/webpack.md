@@ -376,12 +376,45 @@ module: {
 ```
 postcss-loader会在根目录查找postcss.config.js作为配置  
 在根目录新建postcss.config.js文件  
+```js
+//postcss.config.js
+module.exports = {
+	plugins: [
+		require('autoprefixer')({
+			//设置浏览器支持
+			browsers: [
+				"defaults",
+				"not ie <= 8",
+				"last 2 versions",
+				"> 1%",
+				"iOS >= 7",
+				"Android >= 4.0"
+			]
+		})
+	]
+}
 ```
+也可以在package.json 里 ( 与 devDependencies 同级 ) ，设置支持哪些浏览器
+```js
 //postcss.config.js
 module.exports = {
 	plugins: [
 		require('autoprefixer')
 	]
+}
+
+//package.json 
+{
+	...
+	"browserslist": [
+		"defaults",
+		"not ie <= 8",
+		"last 2 versions",
+		"> 1%",
+		"iOS >= 7",
+		"Android >= 4.0"
+	]
+	...
 }
 ```
 
